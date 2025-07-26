@@ -17,29 +17,33 @@ $admin = mysqli_fetch_assoc($query);
 include 'header_admin.php';
 ?>
 
-<div class="container">
-    <h4 class="mb-4">Profil Admin</h4>
-
-    <table class="table table-striped table-bordered" style="max-width:600px">
-        <tr>
-            <th>Username</th>
-            <td><?= htmlspecialchars($admin['username']); ?></td>
-        </tr>
-        <tr>
-            <th>Nama Lengkap</th>
-            <td><?= htmlspecialchars($admin['nama_lengkap']); ?></td>
-        </tr>
-        <tr>
-            <th>Email</th>
-            <td><?= htmlspecialchars($admin['email']); ?></td>
-        </tr>
-        <tr>
-            <th>Role</th>
-            <td><?= htmlspecialchars($admin['role']); ?></td>
-        </tr>
-    </table>
-
-    <a href="ganti_password.php" class="btn btn-warning">Ganti Password</a>
+<div class="container mt-4" style="max-width: 700px;">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Profil Admin</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <tr>
+                    <th>Username</th>
+                    <td><?= htmlspecialchars($admin['username']); ?></td>
+                </tr>
+                <tr>
+                    <th>Nama Lengkap</th>
+                    <td><?= htmlspecialchars($admin['nama_lengkap']); ?></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><?= htmlspecialchars($admin['email']); ?></td>
+                </tr>
+                <tr>
+                    <th>Role</th>
+                    <td><?= htmlspecialchars($admin['role']); ?></td>
+                </tr>
+            </table>
+            <a href="ganti_password.php" class="btn btn-warning mt-3">Ganti Password</a>
+        </div>
+    </div>
 </div>
 
 <?php include 'footer_admin.php'; ?>
